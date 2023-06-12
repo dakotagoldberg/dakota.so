@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@/components/analytics"
 import { NavBar } from "@/components/navbar"
 import Seo from "@/components/SEO"
+import Script from "next/script"
 
 export const metadata = {
   title: "Dakota Goldberg",
@@ -35,6 +36,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Seo />
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-KL580V71S7"></Script>
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-KL580V71S7');
+            `}
+          </Script>
           <div className="max-w-2xl mx-auto py-10 px-4">
             <header>
               <NavBar />

@@ -1,7 +1,7 @@
-# Next.js + Contentlayer
+# Personal Website
 
-A template with Next.js 13 app dir, Contentlayer, Tailwind CSS and dark mode.
+Created with Next.js 13 app dir, Contentlayer, and Tailwind CSS. Design by [@dakotagoldberg](https://github.com/dakotagoldberg)
 
-https://next-contentlayer.vercel.app
+https://dakota.so
 
 
