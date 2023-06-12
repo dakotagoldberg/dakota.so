@@ -10,7 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iconify-json/fluent": "^1.1.23",
+    "@iconify-json/heroicons": "^1.1.11",
     "@iconify-json/mdi": "^1.1.52",
+    "@iconify-json/ph": "^1.1.5",
     "@iconify-json/ri": "^1.1.9",
     "@iconify-json/tabler": "^1.1.79",
     "@iconify/tailwind": "^0.1.3",

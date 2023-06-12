@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center prose dark:prose-invert">
       <div className="flex flex-col mt-14 rounded-xl gradient-subtle-violet-with-border border-1 pl-8 pr-5 pt-8 pb-2.5">
-        <div className="flex flex-row text-xl text-lilac-950 dark:text-lilac-50 font-medium tracking-tight">{"Hey, I'm Dakota"}<VisitPageButton href="/about" className="ml-2"/></div>
+        <div className="flex flex-row text-2xl text-lilac-950 dark:text-lilac-50 font-[550] tracking-tight">{"Hey, I'm Dakota"}<IconButton className="ml-2 mt-0.5" icon="icon-[fluent--sparkle-20-filled] h-[1.35rem] w-[1.35rem]"/></div>
         <div className="w-11/12 sm:w-3/4 mt-2 text-lilac-900 dark:text-lilac-200 font-normal tracking-tight text-md leading-snug">I’m a first-year student at MIT chasing storms, side quests, and solutions to important problems.</div>
         <div className="flex flex-row space-x-1.5 mt-3">
           <IconButton href="mailto:dakotag@mit.edu" icon="icon-[tabler--mail-filled] h-4 w-4"/>
