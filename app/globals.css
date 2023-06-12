@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Plus Jakarta Sans';
+        src: url('../public/fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.ttf')
+          format('truetype-variations');
+        font-weight: 125 950;
+        font-stretch: 75% 125%;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Plus Jakarta Sans';
+        src: url('../public/fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.ttf')
+          format('truetype-variations');
+        font-weight: 125 950;
+        font-stretch: 75% 125%;
+        font-style: italic;
+      }
+}
+
+
+@layer components {
+    .gradient-indigo-violet {
+        @apply bg-gradient-to-tl from-indigo to-violet;
+    }
+    .gradient-indigo-violet-background-with-border {
+        @apply bg-gradient-to-tl from-indigo-light to-violet-light border-1 border-accent-border-light dark:from-indigo-dark dark:to-violet-dark dark:border-accent-border-dark;
+    }
+    .gradient-subtle-violet-with-border {
+        @apply bg-gradient-to-t from-lilac-50 to-[#FFFFFF00] dark:from-[#09091A] dark:to-[#06022100] border-gray-200 dark:border-[#292345];
+    }
+
+    .page-title {
+        @apply text-4xl text-lilac-950 dark:text-lilac-100 font-display font-bold tracking-tight;
+    }
+
+    .post-title {
+        @apply text-4xl text-lilac-950 dark:text-lilac-100 font-display font-semibold tracking-tight;
+    }
+}

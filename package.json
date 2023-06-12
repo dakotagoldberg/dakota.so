@@ -10,6 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iconify-json/mdi": "^1.1.52",
+    "@iconify-json/ri": "^1.1.9",
+    "@iconify-json/tabler": "^1.1.79",
+    "@iconify/tailwind": "^0.1.3",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "18.16.1",
     "@types/react": "18.2.0",

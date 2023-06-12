@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation"
 import { allPosts } from "contentlayer/generated"
-
+import Image from 'next/image'
 import { Metadata } from "next"
 import { Mdx } from "@/components/mdx-components"
+import { formatDate } from "@/functions/formatting"
 
 interface PostProps {
   params: {
@@ -51,13 +52,28 @@ export default async function PostPage({ params }: PostProps) {
 
   return (
     <article className="py-6 prose dark:prose-invert">
-      <h1 className="mb-2">{post.title}</h1>
-      {post.description && (
-        <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">
+      {
+        post.headerImage &&
+          <Image
+            alt={post.title}
+            src={post.headerImage!}
+            width={1000}
+            height={1000}
+            className="mt-8 rounded-xl border-transparent dark:border-lilac-900 border-1"
+          />}
+      <h1 className={"mb-2 page-title " + (post.headerImage ? "mt-10" : "mt-16")}>{post.title}</h1>
+      {(post.description && post.showDescriptionOnPost) && (
+        <p className="text-lg mt-0 text-lilac-700 dark:text-lilac-prose-400">
           {post.description}
         </p>
       )}
-      <hr className="my-4" />
+      <div className="flex flex-row flex-wrap items-center">
+          <time className="text-md text-lilac-700 dark:text-lilac-600 mt-1" dateTime={post.date}>
+            {formatDate(post.date)}
+          </time>
+            {post.contentType == 'note' && <div className="align-middle mt-1 ml-2 px-2 rounded-full gradient-subtle-violet-with-border border-1 text-sm text-lilac-500 dark:text-lilac-700">Note</div>}
+        </div>
+      <hr className="my-4 border-t-lilac-prose-100 dark:border-t-lilac-prose-800" />
       <Mdx code={post.body.code} />
     </article>
   )
