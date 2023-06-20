@@ -54,7 +54,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <footer className="mt-20 mb-3">
               {/* Maybe list the tech stack here? */}
               <div className="text-sm font-medium text-lilac-700 dark:text-lilac-500">Dakota Goldberg © 2023</div>
-              <div className="text-sm text-lilac-600 dark:text-lilac-600"><a className="underline" href="/">dakota.so</a> on GitHub</div>
+              <div className="text-sm text-lilac-600 dark:text-lilac-600"><a className="underline" target="_blank" rel="noopener noreferrer" href="https://github.com/dakotagoldberg/dakota.so">dakota.so</a> on GitHub</div>
             </footer> 
           </div>
           <Analytics />
