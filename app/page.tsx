@@ -18,7 +18,7 @@ export default function Home() {
           />
         </div>
         <div className="w-11/12 sm:w-3/4 mt-2 text-lilac-900 dark:text-lilac-200 font-normal tracking-tight text-md leading-snug">
-          I’m a first-year student at MIT chasing storms, side quests, and
+          I’m a second-year student at MIT chasing storms, side quests, and
           solutions to important problems.
         </div>
         <div className="flex flex-row space-x-1.5 mt-3">
